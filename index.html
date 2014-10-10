@@ -1,0 +1,58 @@
+<!--
+    Author Details
+	==============
+	Author: Ranjith Pandi
+
+	Author URL: http://ranjithpandi.com
+
+	Attribution is must on every page, where this work is used.
+
+	For Attribution removal request. please consider contacting us through http://ranjithpandi.com/#contact
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Strong Password Generator</title>
+<style>
+h2{
+	text-align: center;
+	text-transform: uppercase;
+}
+div{
+	margin-left: 20px;
+	padding: 5px;
+}
+</style>
+</head>
+<body>
+<header>
+	<h2>Strong Password Generator</h2>
+</header>
+<div>
+	Length : <input type="number" name="len" id="pass-len" value="8" min="8" max="20">
+</div>
+<div>
+	<input type="checkbox" name="digits" id="pass-digits" checked> Need Digits 
+</div>
+<div>
+	<input type="checkbox" name="symbol" id="pass-symbols" checked> Need Symbols
+</div>
+<div>
+	<input type="checkbox" name="similar" id="pass-similar" checked> Avoid similar characters (1, i, I, l, L), and (0, o, O)
+</div>
+<div>
+	<input type="text" name="name" id="password" value="">
+</div>
+<div>
+	<input type="button" name="generate" id="generatePassword" value="Generate Password">
+</div>
+<script type="text/javascript" src="javascript/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="javascript/strongpassword.js"></script>
+<script>
+$("#generatePassword").on('click', function(){
+	$('#password').strongPassword();
+});
+</script>
+</body>
+</html>
